@@ -84,4 +84,28 @@
 
 /* --------------- navbar complete -------------------- */
 
-
+.cards{
+    width: 100%;
+    background-color: #efefef;
+    padding-top: 50px; 
+    display: flex;
+}
+.user,.admin{
+    width: 35%;
+    height: 300px;
+    border: 2px solid #000;
+}
+.line{
+    height: 300px;
+    width: 0%;
+    border: 2px solid #000;
+    margin: 0 auto;
+}
+.user{
+    position: relative;
+    right: -8%;
+}
+.admin{
+    position: relative;
+    left: -8%;
+}
