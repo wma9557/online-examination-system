@@ -1,0 +1,87 @@
+#main{
+    width: 100%;
+    height: 100vh;
+    background-image: url(../images/1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; 
+    background-repeat: no-repeat;
+    transition: initial;
+} 
+.navbar-collapse{
+    margin-right: 0 !important;
+}
+.logo-icon{
+    font-size: 35px !important;
+    margin: 0 10px 0 15px;
+    height: 50px;
+    line-height: 50px !important;
+}
+.logo{
+    display: flex;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    height: 50px;
+    line-height: 55px;
+    color: rgb(0,188,212) !important;
+    float: left;
+}
+.logo-text span{
+    color: #fff;
+}
+.navbar-nav>li>a{
+    padding: 5px 15px !important;
+    border-radius: 5px;
+    font-family: sans-serif;
+    letter-spacing: 1px;
+    margin: 0 8px;
+}
+.nav-li{
+    color: #fff !important;
+}
+.navbar-nav li{
+    margin-top: 10px !important;
+}
+.active>a{
+    color: rgb(0,188,212) !important;
+    background-color: #fff !important;
+    font-weight: bold;
+}
+.navbar-default{
+    background-color: transparent !important;
+    border-color: transparent !important;
+    padding-top: 15px; 
+    padding-bottom: 10px;
+    transition-duration: 0.6s;
+}
+.navbar-nav>li>a:hover{
+    color: rgb(0,188,212) !important;
+    background-color: #fff !important; 
+    font-weight: bold;
+}
+.navbar-scroll {
+	background: #ffffff !important;
+	padding: 5px  0 !important;
+	box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.4) !important;
+	transition-duration: 0.6s !important;
+}
+.navbar-scroll li a{
+    color: #000 !important;
+}
+.navbar-scroll .active>a{
+    color: rgb(0,188,212) !important;
+}
+.navbar-scroll .logo{
+    color: #000 !important;
+}
+.navbar-scroll .logo-text span{
+    color: rgb(0,188,212) !important;
+}
+.navbar-toggle{
+    background-color: #fff !important;
+}
+
+/* --------------- navbar complete -------------------- */
+
+
