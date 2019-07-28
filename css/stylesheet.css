@@ -7,6 +7,8 @@
     background-attachment: fixed; 
     background-repeat: no-repeat;
     transition: initial;
+    padding-left: 20px;
+    padding-right: 20px;
 } 
 .navbar-collapse{
     margin-right: 0 !important;
@@ -109,32 +111,23 @@
 }
 /*---------------- top content complete -------------------*/
 .cards{
-    width: 100%;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    background-color: #efefef;
     position: absolute;
     top: 100%;
     z-index: 10;
-}
-.user,.admin{
-    float: left;
-    width: 35%;
-    height: 300px;
-    border: 2px solid gray;
-}
-
-.cards{
     width: 100%;
     background-color: #efefef;
-    padding-top: 50px; 
+    padding: 50px; 
     display: flex;
 }
 .user,.admin{
     width: 35%;
     height: 300px;
-    border: 2px solid #000;
     text-align: center;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    position: relative;
 }
 .line{
     height: 300px;
@@ -144,11 +137,9 @@
     margin: 0 auto;
 }
 .user{
-    position: relative;
     right: -8%;
 }
 .admin{
-    position: relative;
     left: -8%;
 }
 .line span{
@@ -160,16 +151,110 @@
     border: none;
     background-color: #efefef;
 }
+/* ---------------------- icon setting ------------------ */
 .user p,.admin p{
     font-size: 30px;
 }
 .user p::before,.user p::after,.admin p::before,.admin p::after{
     content: '';
     height: 1px;
-    width: 100px;
+    width: 10vw;
     border-top: 1px solid black;
     display: inline-block;
     padding-top: 0.2em;
     margin-left: 5%;
     margin-right: 5%;
 }
+/* ------------------ cross section in card --------------------*/
+.user div,.admin div{
+    position: absolute;
+    background-color: rgb(25, 133, 233);
+    width: 100%;
+    height: 27vh;
+    transform: skewY(-15deg);
+    bottom: -125px;
+    left: 15%;
+}
+/* ------------- button ----------------- */
+.user button,.admin button{
+    background: transparent;
+    box-shadow: none;
+    border: 2px solid rgb(25, 133, 233);
+    padding: 10px 20px;
+    margin-top: 50px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    transition: all;
+    transition-duration: 0.6s;
+    letter-spacing: 1px;
+}
+.user button:hover,.admin button:hover{
+    background-color: rgb(25, 133, 233);
+    color: #fff;
+}
+
+/* ------------ responsiv cards ----------*/
+@media (max-width: 780px){
+    .user h2,.admin h2{
+        font-size: 25px;
+    }
+    .container-fluid{
+        padding-left: 0 !important; 
+        padding-right: 0 !important; 
+    }
+    .user{
+        right: -5%;
+    }
+    .admin{
+        left: -5%;
+    }
+    .user div,.admin div{
+        bottom: -44%;
+    }
+}
+@media (max-width: 670px){
+    .cards{
+        display: block;
+    }
+    .user,.admin{
+        margin: 0 auto;
+        right: 0;
+        left: 0;
+        width: 100%;
+    }
+    .user h2,.admin h2{
+        font-size: 25px;
+    }
+    .container-fluid{
+        padding-left: 50px !important; 
+        padding-right: 50px !important; 
+    }
+    .user div,.admin div{
+        bottom: -15%;
+        height: 15vh;
+    }
+    .line{
+        width: 100%;
+        height: 0;
+        border: 2px solid #000;
+        margin: 50px auto;
+        line-height: 0px;
+        text-align: center;
+    }
+    .line span{
+        margin: 0 auto;
+        margin-top: -50px;
+    }
+}
+@media (max-width: 450px){
+    .user div,.admin div{
+        bottom: -30%;
+        height: 17vh;
+    }
+}
+@media (max-width: 350px){
+    .user div,.admin div{
+        bottom: -15%;
+        height: 12vh;
+    }
+}
+/*----------------- cards complete ----------------*/
