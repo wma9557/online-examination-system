@@ -9,6 +9,7 @@
     transition: initial;
     padding-left: 20px;
     padding-right: 20px;
+    
 } 
 .navbar-collapse{
     margin-right: 0 !important;
@@ -38,6 +39,8 @@
     font-family: sans-serif;
     letter-spacing: 1px;
     margin: 0 8px;
+    transition: all ease-in-out;
+    transition-duration: 0.4s;
 }
 .nav-li{
     color: #fff !important;
@@ -101,18 +104,9 @@
 .btn{
     transition: all 0.6s;
 }
-@media (max-width: 768px){
-    .carousel-caption h1{
-        font-size: 32px;
-    }
-    .carousel-caption h3{
-        font-size: 15px;
-    }
-}
 /*---------------- top content complete -------------------*/
 .cards{
-    position: absolute;
-    top: 100%;
+    position: relative;
     z-index: 10;
     width: 100%;
     background-color: #efefef;
@@ -128,6 +122,7 @@
     overflow: hidden;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     position: relative;
+	box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.4) !important;
 }
 .line{
     height: 300px;
@@ -170,9 +165,9 @@
     position: absolute;
     background-color: rgb(25, 133, 233);
     width: 100%;
-    height: 27vh;
+    height: 30vh;
     transform: skewY(-15deg);
-    bottom: -125px;
+    bottom: -150px;
     left: 15%;
 }
 /* ------------- button ----------------- */
@@ -192,12 +187,261 @@
     color: #fff;
 }
 
-/* ------------ responsiv cards ----------*/
-@media (max-width: 780px){
+/*----------------- cards complete ----------------*/
+
+/*--------------- what is online test maker start -----------------------*/
+.explanation{
+    width: 100%;
+    padding: 50px;
+    padding-top: 30px;
+    text-align: center;
+}
+.explanation h1{
+    margin-bottom: 20px;
+}
+.explanation p{
+    padding: 0 30px;
+    font-size: 18px;
+    line-height: 24px;
+    font-family: Merriweather;
+    justify-content: center;
+}
+
+/*--------------- what is online test maker close -----------------------*/
+
+/*------------------- working contianer -----------------------------*/
+.working{
+    width: 100%;
+    align-items: center;
+    padding: 50px;
+    padding-top: 0;
+    z-index: 100;
+}
+.working_icons_main{
+    display: flex;
+}
+.working_field{
+    margin: 0 auto;    
+}
+.working_icons{
+    width: 100px;
+    height: 100px;
+    border: 2px solid #000;
+    border-radius: 50px;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.working_field:nth-child(1) .working_icons{
+    background-size: 60px;
+    background-image: url(../images/2.png);
+}
+.working_field:nth-child(2) .working_icons{
+    background-size: 80px;
+    background-image: url(../images/3.png);
+}
+.working_field:nth-child(3) .working_icons{
+    background-size: 60px;
+    background-image: url(../images/4.png);
+}
+.working_field:nth-child(4) .working_icons{
+    background-size: 60px;
+    background-image: url(../images/5.png);
+}
+.working_field p{
+    text-align: center;
+    margin-top: 10px;
+}
+/*--------------------------- how it works icon complete ------------------------*/
+
+/*--------------------- users start ----------------------*/
+.users{
+    background-color: #efefef;
+    text-align: center;
+}
+.user_main_heading{
+    text-align: center;
+    padding: 20px;
+    padding-bottom: 10px;
+}
+.users .container-fluid{
+    padding: 30px 0;
+    padding-top: 0;
+    display: flex;
+}
+.users .container-fluid div{
+    width: 27%;
+    min-height: 50px;
+    margin: 0 auto;
+    padding: 20px;
+    padding-bottom: 0;
+}/*------ 3 cards -------*/
+.users .container-fluid div span{
+    font-size: 300%;
+    padding: 10px 0;
+}/*-------- icons ---------*/
+.users .container-fluid div p{
+    padding-top: 10px;
+    font-size: 18px;
+    line-height: 24px;
+    font-family: Merriweather;
+    justify-content: center;
+}/*-------- content -------*/
+/*--------------------- users close ----------------------*/
+
+/*---------------------- features start ------------------------------*/
+.features{
+    width: 100%;
+    min-height: 100px;
+    padding: 50px; 
+    padding-top: 20px;
+}
+.features_main_heading{
+    text-align: center;
+    padding: 20px;
+}
+.features>div:nth-child(2),.features>div:nth-child(3){
+    color: #fff;
+    display: flex;
+    margin-top: 20px;
+}/*----- tow line of cards each contain tow cards -----*/
+.features_card{
+    width: 40%;
+    min-height: 30px;
+    background-color: rgb(25,133,233);
+    margin: 0 auto;
+}/*------ total 4 cards ------*/
+.features_card div:nth-child(1),.features_card div:nth-child(2){
+    height: 100%;
+    float: left;
+    box-sizing: border-box;
+}/*------ tow divs one for icon and other for content inside card ------*/
+.features_card div:nth-child(1){
+    width: 20%;
+    text-align: center;
+    padding-top: 10px;
+}/*--------- for icons ---------*/
+.features_card div:nth-child(1) span{
+    font-size: 50px;
+}/*----- icons -----*/
+.features_card div:nth-child(2){
+    padding: 0 20px 0 10px;
+    width: 80%;
+}/*----- for content -----*/
+.features_card div:nth-child(2) p{
+    margin: 20px 0;
+    font-size: 18px;
+    line-height: 24px;
+    font-family: Merriweather;
+    justify-content: center;
+}
+/*-------------------------------- features close ---------------------------*/
+
+/*-------------------------------- demo start ---------------------------------*/
+.demo{
+    width: 100%;
+    padding: 40px !important;
+    padding-top: 30px !important;
+    background-color: #efefef;
+}
+.demo_main_heading{
+    text-align: center;
+}
+.demo_main_heading h1{
+    margin-bottom: 20px;
+}
+.demo_main_heading p{
+    font-weight: bold;
+}
+.demo div:nth-child(2){
+    display: flex;
+    margin-top: 30px;
+}
+.student_demo,.examiner_demo{
+    margin: 0 auto;
+    width: 40%;
+}
+.student_demo h2,.examiner_demo h2{
+    text-align: center;
+    margin-bottom: 30px;
+}
+.line_demo{
+    border: 2px solid #000;
+    background-color: #000;
+}
+.demo li{
+    font-size: 18px;
+    line-height: 24px;
+    font-family: Merriweather;
+    justify-content: center;
+    margin-bottom: 5px;
+}
+.demo ol{
+    height: 154px;
+}
+.student_demo button,.examiner_demo button{
+    box-shadow: none;
+    border: 2px solid rgb(25, 133, 233);
+    padding: 10px 20px;
+    margin-top: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    transition: all;
+    transition-duration: 0.6s;
+    letter-spacing: 1px;
+    width: 80%;
+    background-color: rgb(25, 133, 233);
+    color: #fff;
+}
+.student_demo button:hover,.examiner_demo button:hover{
+    border: 2px solid rgb(8, 73, 133);
+    background-color: rgb(4, 88, 167);
+}
+/*-------------------------------- demo close ---------------------------------*/
+
+
+
+@media(max-width:768px){
+    h1{font-size: 32px !important;}
+}
+
+@media (max-width: 768px){
+    #navbar-scroll {
+        background: #ffffff !important;
+        padding: 5px  0 !important;
+        box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.4) !important;
+        transition-duration: 0.6s !important;
+    }
+    #navbar-scroll li a{
+        color: #000 !important;
+    }
+    #navbar-scroll li a:hover{
+        color: rgb(0,188,212) !important;
+    }
+    #navbar-scroll .active>a{
+        color: rgb(0,188,212) !important;
+    }
+    #navbar-scroll .logo{
+        color: #000 !important;
+    }
+    #navbar-scroll .logo-text span{
+        color: rgb(0,188,212) !important;
+    }
+      /*-------------------- navbar close -----------------*/
+      /*------------------- top captions -------------------*/
+    .carousel-caption h3{
+        font-size: 15px;
+    }
+      /*---------------------- top captions close ------------*/
+      /*--------------------- responsive cards start ----------------------*/
+    .users .container-fluid{
+        display: inherit;
+    }
+    .users .container-fluid div{
+        width: 100%;
+    }
     .user h2,.admin h2{
         font-size: 25px;
     }
-    .container-fluid{
+    .cards{
         padding-left: 0 !important; 
         padding-right: 0 !important; 
     }
@@ -208,10 +452,48 @@
         left: -5%;
     }
     .user div,.admin div{
-        bottom: -44%;
+        bottom: -55%;
+    }
+    /*--------------------- responsive cards close ---------------------*/
+    /*--------------------- features cards start -----------------------*/
+    .features_card{
+        width: 100%;
+        float: left;
+        margin-top: 20px;
+    }
+    .features>div:nth-child(2),.features>div:nth-child(3){
+        display: inherit;
+    }
+    /*--------------------- features cards close -----------------------*/
+    /*--------------------- demo start ----------------------*/
+    .demo div:nth-child(2){
+        display: inherit;
+    }
+    ol{
+        height: auto !important;
+    }
+    .examiner_demo,.student_demo{
+        width: 80%;
+    }
+    .student_demo button,.examiner_demo button{
+        width: 100%;
+    }
+    .line_demo{
+        margin-top: 50px !important;
+        margin-bottom: 50px !important;
+    }
+    .student_demo h2,.examiner_demo h2{
+        font-size: 25px;
+    }
+    /*--------------------- demo close ----------------------*/
+
+    .explanation p{
+        padding: 0px;
     }
 }
+
 @media (max-width: 670px){
+    /* ----------------- responsive cards starts --------------- */
     .cards{
         display: block;
     }
@@ -224,12 +506,12 @@
     .user h2,.admin h2{
         font-size: 25px;
     }
-    .container-fluid{
+    .cards{
         padding-left: 50px !important; 
         padding-right: 50px !important; 
     }
     .user div,.admin div{
-        bottom: -15%;
+        bottom: -18%;
         height: 15vh;
     }
     .line{
@@ -244,17 +526,19 @@
         margin: 0 auto;
         margin-top: -50px;
     }
+    /* ----------------- responsive cards close --------------- */
 }
-@media (max-width: 450px){
+
+
+@media (max-width: 440px){
     .user div,.admin div{
         bottom: -30%;
+        height: 20vh;
+    }
+}
+@media (max-width: 380px){
+    .user div,.admin div{
+        bottom: -26%;
         height: 17vh;
     }
 }
-@media (max-width: 350px){
-    .user div,.admin div{
-        bottom: -15%;
-        height: 12vh;
-    }
-}
-/*----------------- cards complete ----------------*/
