@@ -4,6 +4,7 @@
     background-image: url(../images/1.jpg);
     background-size: cover;
     background-position: center;
+    background-position-y: 0px;
     background-attachment: fixed; 
     background-repeat: no-repeat;
     transition: initial;
@@ -44,9 +45,47 @@
 }
 .nav-li{
     color: #fff !important;
+    text-decoration: none;
 }
-.navbar-nav li{
+.nested{
+    width: 110px;
+}
+li:hover .nav-li ul {
+    display: block;
+}
+.navbar-nav li ul{
+    display: none;
+    position: relative;
+    right: 100%;
+    width: 200px;
+    text-align: right;
+}
+.navbar-nav li:hover ul{
+    display: block !important;
+}
+.navbar-nav li,.nested-nav li{
     margin-top: 10px !important;
+}
+.nested-nav{
+    list-style-type: none;
+}
+.nested-nav a{
+    line-height: 20px;
+    position: relative;
+    display: block;
+    padding: 5px 15px !important;
+    border-radius: 5px;
+    font-family: sans-serif;
+    letter-spacing: 1px;
+    margin: 0 8px;
+    transition: all ease-in-out;
+    transition-duration: 0.4s;
+}
+.nested-nav a:hover{
+    text-decoration: none;
+    color: rgb(0,188,212) !important;
+    background-color: #fff !important; 
+    font-weight: bold;
 }
 .active>a{
     color: rgb(0,188,212) !important;
@@ -60,7 +99,7 @@
     padding-bottom: 10px;
     transition-duration: 0.6s;
 }
-.navbar-nav>li>a:hover{
+.navbar-nav>li>a:hover,.navbar-nav>li>ul>li>a:hover{
     color: rgb(0,188,212) !important;
     background-color: #fff !important; 
     font-weight: bold;
@@ -396,7 +435,108 @@
     background-color: rgb(4, 88, 167);
 }
 /*-------------------------------- demo close ---------------------------------*/
-
+/*-------------------------------- footer start ------------------------------*/
+.footer{
+    display: flex;
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+    padding: 50px;
+    padding-top: 10px;
+}
+.footer h3{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+    margin-top: 40px;
+}
+.footer>div{
+    width: 30%;
+    min-width: 40px;
+    margin: 0 auto;
+}
+.footer ul{
+    list-style-type: none;
+    padding: 0;
+}
+.footer ul li{
+    margin-top: 10px;
+}
+.footer_li a{
+    display: block;
+    color: #fff !important;
+    text-decoration: none;
+    padding: 10px 0 5px 0;
+    border-bottom: 1px solid #fff;
+} 
+.footer_li a:hover{
+    text-decoration: none;
+    font-weight: bold;
+    color: rgb(0,188,212) !important;
+}
+.footer>div div{
+    display: flex;
+    margin-bottom: 20px;
+}
+.footer>div div span{
+    font-size: 20px;
+    padding: 0 15px 15px 0;
+}
+.footer p{
+    line-height: 24px;
+    font-size: 16px;
+}
+.footer_btn{
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+    background: #f1f1f1;
+    text-align: center;
+    margin: 8.1px;
+	margin-top: 50px;
+	border-radius: 30%;
+	box-shadow: 0 5px 15px -5px #00000070;
+	color: rgb(25, 133, 233);;
+	overflow: hidden;
+	position: relative;
+	padding: 0;
+}
+.footer_btn i{
+	transition: 0.2s linear;
+}
+.footer_btn:hover i{
+	transform: scale(1.3);
+	color: #f1f1f1;
+}
+.footer_btn::before{
+	content: "";
+	position: absolute;
+	width: 120%;
+	height: 120%;
+	background: rgb(25, 133, 233);;
+	transform: rotate(45deg);
+	left: -110%;
+	top: 90%;
+}
+.footer_btn:hover::before{
+	animation: button_Animation 0.7s 1;
+	top: -10%;
+	left: -10%;
+}
+@keyframes button_Animation {
+  0%{
+    left: -110%;
+    top: 90%;
+  }50%{
+    left: 10%;
+    top: -30%;
+  }100%{
+    top: -10%;
+    left: -10%;
+    }
+}
+/*--------------------------------- footer close ---------------------------------*/
 
 
 @media(max-width:768px){
@@ -404,6 +544,15 @@
 }
 
 @media (max-width: 768px){
+    .nested{
+        width: 100%;
+    }
+    .navbar-nav li ul{
+        position: relative;
+        right: 0%;
+        width: 100%;
+        text-align: left;
+    }
     #navbar-scroll {
         background: #ffffff !important;
         padding: 5px  0 !important;
@@ -486,6 +635,14 @@
         font-size: 25px;
     }
     /*--------------------- demo close ----------------------*/
+    /*--------------------- footer start --------------------*/
+    .footer{
+        display: inherit;
+    }
+    .footer>div{
+        width: 100% !important;
+    }
+    /*--------------------- footer close ---------------------*/
 
     .explanation p{
         padding: 0px;
