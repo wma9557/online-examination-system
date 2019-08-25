@@ -238,7 +238,7 @@ li:hover .nav-li ul {
 .explanation h1{
     margin-bottom: 20px;
 }
-.explanation p{
+.explanation p,.about p{
     padding: 0 30px;
     font-size: 18px;
     line-height: 24px;
@@ -331,7 +331,7 @@ li:hover .nav-li ul {
 .features{
     width: 100%;
     min-height: 100px;
-    padding: 50px; 
+    padding: 50px !important; 
     padding-top: 20px;
 }
 .features_main_heading{
@@ -366,15 +366,33 @@ li:hover .nav-li ul {
     padding: 0 20px 0 10px;
     width: 80%;
 }/*----- for content -----*/
-.features_card div:nth-child(2) p{
+.features_card div:nth-child(2) p,.features_main p{
     margin: 20px 0;
     font-size: 18px;
     line-height: 24px;
     font-family: Merriweather;
     justify-content: center;
 }
-/*-------------------------------- features close ---------------------------*/
+/*-------------------------------- features home close ---------------------------*/
 
+/*----------------- features page ------------------*/
+.features_main>div{
+    padding: 30px;
+    height: auto !important;
+    margin-bottom: 20px;
+    display: flex;
+}
+.features_main h1{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.features_main>div .content{
+    width: 60%;
+    padding-right: 20px;
+}
+.features_main>div .image{
+    width: 40%;
+    display: inline-block;
+}
 /*-------------------------------- demo start ---------------------------------*/
 .demo{
     width: 100%;
@@ -435,6 +453,25 @@ li:hover .nav-li ul {
     background-color: rgb(4, 88, 167);
 }
 /*-------------------------------- demo close ---------------------------------*/
+
+/*-------------------------------------- about us----------------*/
+.about{
+    padding: 50px;
+    width: 100%;
+}
+.about div:first-child{
+    float: left;
+    width: 40%;
+    height: 310px;
+}
+.about div:first-child img{
+    width: 100%;
+    height: 100%;
+}
+.about div:last-child{
+    float: right;
+    width: 60%;
+}
 /*-------------------------------- footer start ------------------------------*/
 .footer{
     display: flex;
