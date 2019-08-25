@@ -375,24 +375,6 @@ li:hover .nav-li ul {
 }
 /*-------------------------------- features home close ---------------------------*/
 
-/*----------------- features page ------------------*/
-.features_main>div{
-    padding: 30px;
-    height: auto !important;
-    margin-bottom: 20px;
-    display: flex;
-}
-.features_main h1{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-.features_main>div .content{
-    width: 60%;
-    padding-right: 20px;
-}
-.features_main>div .image{
-    width: 40%;
-    display: inline-block;
-}
 /*-------------------------------- demo start ---------------------------------*/
 .demo{
     width: 100%;
@@ -454,23 +436,173 @@ li:hover .nav-li ul {
 }
 /*-------------------------------- demo close ---------------------------------*/
 
-/*-------------------------------------- about us----------------*/
+
+
+/*-------------------------------------- about us page----------------*/
 .about{
     padding: 50px;
     width: 100%;
 }
-.about div:first-child{
-    float: left;
+.about div:last-child{
+    float: right;
     width: 40%;
     height: 310px;
 }
-.about div:first-child img{
+.about div:last-child img{
     width: 100%;
     height: 100%;
 }
-.about div:last-child{
-    float: right;
+.about div:first-child{
+    float: left;
     width: 60%;
+}
+
+/*----------------- features page ------------------*/
+.features_main>div{
+    padding: 30px;
+    height: auto !important;
+    margin-bottom: 20px;
+    display: flex;
+}
+.features_main h1{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.features_main>div .content{
+    width: 60%;
+    padding-right: 20px;
+}
+.features_main>div .image{
+    width: 40%;
+    display: inline-block;
+}
+/*----------------------------- contact us page --------------------------*/
+.contact{
+    padding: 30px 0px; 
+    width: 100%;
+}
+.contact section:first-child{
+    display: flex;
+}
+.contact section:first-child h4{
+    font-weight: 700;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-style: normal;
+    line-height: 24px;
+}
+.contact_inner{
+    position: relative;
+    z-index: 9;
+    background: #fff;
+    padding: 30px 30px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,.08);
+    width: 300px;
+    margin-left: 30px;
+}
+.contact_inner .section-field{
+    position: relative;
+    width: 100%;
+    float: left;
+}
+.contact_inner .section-field input{
+    outline: medium none !important;
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 4px;
+    padding-left: 20px;
+    height: 48px;
+    line-height: 48px;
+    clear: both;
+    color: #b6b6b6;
+    border: 1px solid #e1e1e1;
+}
+.contact_inner .section-field.textarea textarea {
+    width: 100%;
+    float: left;
+    color: #b6b6b6;
+    border: 1px solid #e1e1e1;
+    border-radius: 4px;
+    padding: 15px 0 0 20px;
+    resize: none;
+    box-sizing: border-box;
+}
+.contact_inner button{
+    margin-top: 30px!important;
+    color: #fff;
+    padding: 12px 36px;
+    font-weight: 500;
+    font-size: 16px;
+    border: none;
+    position: relative;
+    background: #4ac4f3;
+    font-family: 'Raleway',sans-serif;
+    display: inline-block;
+    border-radius: 4px;
+    outline: medium none!important;
+    width: 100%;
+    box-sizing: border-box;
+}
+.map{
+    margin-left: 20px;
+}
+.map iframe{
+    height: 200px;
+    width: 600px;
+    height: 573px;
+}
+.contact section:last-child{
+    padding: 40px;
+    display: flex;
+}
+.contact section:last-child h4{
+    padding-bottom: 10px;
+    font-weight: 600;
+    font-family: 'Raleway',sans-serif;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 24px;
+    font-style: normal;
+    line-height: 24px;
+    margin: 0 0 10px;
+}
+.contact section:last-child p{
+    font-family: 'Open Sans',sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 24px;
+    color: #666;
+}
+.contact_box{
+    width: 25%;
+    display: inline-block;
+}
+.contact_box .icon{
+    font-size: 26px;
+    float: left;
+    margin-right: 20px;
+    height: 60px;
+    width: 60px;
+    background: #f4f4f4;
+    text-align: center;
+    line-height: 60px;
+    color: #4ac4f3;
+    border-radius: 90px;
+}
+.contact_box .contact_box_content{
+    display: table-cell;
+}
+.contact_box .social a{
+    margin-top: 0px !important;
+}
+.contact_box:last-child .contact_box_content{
+    display: block;
+}
+.contact_box:last-child{
+    text-align: center;
 }
 /*-------------------------------- footer start ------------------------------*/
 .footer{
@@ -576,163 +708,22 @@ li:hover .nav-li ul {
 /*--------------------------------- footer close ---------------------------------*/
 
 
-@media(max-width:768px){
-    h1{font-size: 32px !important;}
-}
-
-@media (max-width: 768px){
-    .nested{
-        width: 100%;
-    }
-    .navbar-nav li ul{
-        position: relative;
-        right: 0%;
-        width: 100%;
-        text-align: left;
-    }
-    #navbar-scroll {
-        background: #ffffff !important;
-        padding: 5px  0 !important;
-        box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.4) !important;
-        transition-duration: 0.6s !important;
-    }
-    #navbar-scroll li a{
-        color: #000 !important;
-    }
-    #navbar-scroll li a:hover{
-        color: rgb(0,188,212) !important;
-    }
-    #navbar-scroll .active>a{
-        color: rgb(0,188,212) !important;
-    }
-    #navbar-scroll .logo{
-        color: #000 !important;
-    }
-    #navbar-scroll .logo-text span{
-        color: rgb(0,188,212) !important;
-    }
-      /*-------------------- navbar close -----------------*/
-      /*------------------- top captions -------------------*/
-    .carousel-caption h3{
-        font-size: 15px;
-    }
-      /*---------------------- top captions close ------------*/
-      /*--------------------- responsive cards start ----------------------*/
-    .users .container-fluid{
-        display: inherit;
-    }
-    .users .container-fluid div{
-        width: 100%;
-    }
-    .user h2,.admin h2{
-        font-size: 25px;
-    }
-    .cards{
-        padding-left: 0 !important; 
-        padding-right: 0 !important; 
-    }
-    .user{
-        right: -5%;
-    }
-    .admin{
-        left: -5%;
-    }
-    .user div,.admin div{
-        bottom: -55%;
-    }
-    /*--------------------- responsive cards close ---------------------*/
-    /*--------------------- features cards start -----------------------*/
-    .features_card{
-        width: 100%;
-        float: left;
-        margin-top: 20px;
-    }
-    .features>div:nth-child(2),.features>div:nth-child(3){
-        display: inherit;
-    }
-    /*--------------------- features cards close -----------------------*/
-    /*--------------------- demo start ----------------------*/
-    .demo div:nth-child(2){
-        display: inherit;
-    }
-    ol{
-        height: auto !important;
-    }
-    .examiner_demo,.student_demo{
-        width: 80%;
-    }
-    .student_demo button,.examiner_demo button{
-        width: 100%;
-    }
-    .line_demo{
-        margin-top: 50px !important;
-        margin-bottom: 50px !important;
-    }
-    .student_demo h2,.examiner_demo h2{
-        font-size: 25px;
-    }
-    /*--------------------- demo close ----------------------*/
-    /*--------------------- footer start --------------------*/
-    .footer{
-        display: inherit;
-    }
-    .footer>div{
-        width: 100% !important;
-    }
-    /*--------------------- footer close ---------------------*/
-
-    .explanation p{
-        padding: 0px;
-    }
-}
-
-@media (max-width: 670px){
-    /* ----------------- responsive cards starts --------------- */
-    .cards{
-        display: block;
-    }
-    .user,.admin{
-        margin: 0 auto;
-        right: 0;
-        left: 0;
-        width: 100%;
-    }
-    .user h2,.admin h2{
-        font-size: 25px;
-    }
-    .cards{
-        padding-left: 50px !important; 
-        padding-right: 50px !important; 
-    }
-    .user div,.admin div{
-        bottom: -18%;
-        height: 15vh;
-    }
-    .line{
-        width: 100%;
-        height: 0;
-        border: 2px solid #000;
-        margin: 50px auto;
-        line-height: 0px;
-        text-align: center;
-    }
-    .line span{
-        margin: 0 auto;
-        margin-top: -50px;
-    }
-    /* ----------------- responsive cards close --------------- */
-}
 
 
-@media (max-width: 440px){
-    .user div,.admin div{
-        bottom: -30%;
-        height: 20vh;
-    }
-}
-@media (max-width: 380px){
-    .user div,.admin div{
-        bottom: -26%;
-        height: 17vh;
-    }
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

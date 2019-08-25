@@ -1,0 +1,160 @@
+@media(max-width:768px){
+    h1{font-size: 32px !important;}
+}
+
+@media (max-width: 768px){
+    .nested{
+        width: 100%;
+    }
+    .navbar-nav li ul{
+        position: relative;
+        right: 0%;
+        width: 100%;
+        text-align: left;
+    }
+    #navbar-scroll {
+        background: #ffffff !important;
+        padding: 5px  0 !important;
+        box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.4) !important;
+        transition-duration: 0.6s !important;
+    }
+    #navbar-scroll li a{
+        color: #000 !important;
+    }
+    #navbar-scroll li a:hover{
+        color: rgb(0,188,212) !important;
+    }
+    #navbar-scroll .active>a{
+        color: rgb(0,188,212) !important;
+    }
+    #navbar-scroll .logo{
+        color: #000 !important;
+    }
+    #navbar-scroll .logo-text span{
+        color: rgb(0,188,212) !important;
+    }
+      /*-------------------- navbar close -----------------*/
+      /*------------------- top captions -------------------*/
+    .carousel-caption h3{
+        font-size: 15px;
+    }
+      /*---------------------- top captions close ------------*/
+      /*--------------------- responsive cards start ----------------------*/
+    .users .container-fluid{
+        display: inherit;
+    }
+    .users .container-fluid div{
+        width: 100%;
+    }
+    .user h2,.admin h2{
+        font-size: 25px;
+    }
+    .cards{
+        padding-left: 0 !important; 
+        padding-right: 0 !important; 
+    }
+    .user{
+        right: -5%;
+    }
+    .admin{
+        left: -5%;
+    }
+    .user div,.admin div{
+        bottom: -55%;
+    }
+    /*--------------------- responsive cards close ---------------------*/
+    /*--------------------- features cards start -----------------------*/
+    .features_card{
+        width: 100%;
+        float: left;
+        margin-top: 20px;
+    }
+    .features>div:nth-child(2),.features>div:nth-child(3){
+        display: inherit;
+    }
+    /*--------------------- features cards close -----------------------*/
+    /*--------------------- demo start ----------------------*/
+    .demo div:nth-child(2){
+        display: inherit;
+    }
+    ol{
+        height: auto !important;
+    }
+    .examiner_demo,.student_demo{
+        width: 80%;
+    }
+    .student_demo button,.examiner_demo button{
+        width: 100%;
+    }
+    .line_demo{
+        margin-top: 50px !important;
+        margin-bottom: 50px !important;
+    }
+    .student_demo h2,.examiner_demo h2{
+        font-size: 25px;
+    }
+    /*--------------------- demo close ----------------------*/
+    /*--------------------- footer start --------------------*/
+    .footer{
+        display: inherit;
+    }
+    .footer>div{
+        width: 100% !important;
+    }
+    /*--------------------- footer close ---------------------*/
+
+    .explanation p{
+        padding: 0px;
+    }
+}
+
+@media (max-width: 670px){
+    /* ----------------- responsive cards starts --------------- */
+    .cards{
+        display: block;
+    }
+    .user,.admin{
+        margin: 0 auto;
+        right: 0;
+        left: 0;
+        width: 100%;
+    }
+    .user h2,.admin h2{
+        font-size: 25px;
+    }
+    .cards{
+        padding-left: 50px !important; 
+        padding-right: 50px !important; 
+    }
+    .user div,.admin div{
+        bottom: -18%;
+        height: 15vh;
+    }
+    .line{
+        width: 100%;
+        height: 0;
+        border: 2px solid #000;
+        margin: 50px auto;
+        line-height: 0px;
+        text-align: center;
+    }
+    .line span{
+        margin: 0 auto;
+        margin-top: -50px;
+    }
+    /* ----------------- responsive cards close --------------- */
+}
+
+
+@media (max-width: 440px){
+    .user div,.admin div{
+        bottom: -30%;
+        height: 20vh;
+    }
+}
+@media (max-width: 380px){
+    .user div,.admin div{
+        bottom: -26%;
+        height: 17vh;
+    }
+}
