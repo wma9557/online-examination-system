@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="css/responsive_css.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <script src="js/jquery.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <script src="js/script.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="css/fonts.css">
@@ -79,33 +82,113 @@
                 An online test maker is a tool that helps teachers and trainers to easily create and assign online tests to learners. Online tests can easily be scheduled as they can be accessed anytime, anywhere. The tests are automatically graded saving instructors tons of time and effort. Online testing also offers detailed reports, which reveal knowledge gaps and provide insights into a learner’s overall performance.
             </p>
         </div>
-    </div><!-- what is online test maker start -->
-    <div class="working container-fluid"><!----- working container --------->
-        <div class="working_icons_main"><!----- working icons main --------->
-            
-            <!---------------- four icons start ------------------->
+    </div><!-- what is online test maker close -->
+
+
+    <script>
+            $(document).ready(function() {
+                $('#working_carousel').owlCarousel({
+                    autoplay: true,
+                    autoplayTimeout: 5000,
+                    navSpeed: 600,
+                    dotsSpeed: 600,
+                    rewind: true,
+                    margin:10,
+                    responsiveClass:true,
+                    infinite: false,
+                    autoplayHoverPause:true,
+                    responsive:{
+                        0:{
+                            items:1,
+                            nav:true,
+                            dots:true
+                        },
+                        768:{
+                            items: 2,
+                            nav:false,
+                            loop:false
+                        }
+                    }
+                })
+            });
+    </script>
+    <div id="working_carousel" class="owl-carousel owl-theme working container-fluid"><!----- working container --------->
+        <!---------------- four icons start ------------------->
+        <div class="item_working">
             <div class="working_field">
-                <div class="working_icons"></div>
+                <div class="working_icons" style=" background-size: 60px;background-image: url(images/2.png);"></div>
                 <p>Make Question</p>
             </div>
             <div class="working_field">
-                <div class="working_icons"></div>
+                <div class="working_icons" style="background-size: 80px;background-image: url(images/3.png);"></div>
                 <p>Set Limits</p>
             </div>
+        </div>
+        <div class="item_working">
             <div class="working_field">
-                <div class="working_icons"></div>
+                <div class="working_icons" style="background-size: 60px;background-image: url(images/4.png);"></div>
                 <p>Upload Test</p>
             </div>    
             <div class="working_field"> 
-                <div class="working_icons"></div>
+                <div class="working_icons" style="background-size: 60px;background-image: url(images/5.png);"></div>
                 <p>Generate Result</p>
-            </div>
-            <!---------------- four icons end ------------------->
-
-        </div><!----- working icons main close --------->
+            </div>    
+        </div>          
+        <!---------------- four icons end ------------------->
     </div><!------------------------------------- working container close --------------------------->
 
 
+
+    <script>
+        $(document).ready(function() {
+            $('#carousel_buisness').owlCarousel({
+                autoplay: true,
+                autoplayTimeout: 5000,
+                navSpeed: 600,
+                dotsSpeed: 600,
+                rewind: true,
+                margin:10,
+                responsiveClass:true,
+                infinite: false,
+                autoplayHoverPause:true,
+                responsive:{
+                    0:{
+                        items:1,
+                        nav:true,
+                        dots:true
+                    },
+                    768:{
+                        items: 2,
+                        nav:false,
+                        loop:false
+                    }
+                }
+            })
+            $('#carousel_teacher').owlCarousel({
+                autoplay: true,
+                autoplayTimeout: 5000,
+                navSpeed: 600,
+                dotsSpeed: 600,
+                rewind: true,
+                margin:10,
+                responsiveClass:true,
+                infinite: false,
+                autoplayHoverPause:true,
+                responsive:{
+                    0:{
+                        items:1,
+                        nav:true,
+                        dots:true
+                    },
+                    768:{
+                        items: 3,
+                        nav:false,
+                        loop:false
+                    }
+                }
+            })
+        });
+    </script>
     <div class="container-fluid users"><!------------------------user start  ------------------------------>
         <div class="buisness"><!-------- buisness -------------->
             <h2>What’s in it for businesses?</h2>
@@ -118,14 +201,14 @@
             <p class="example_para">
                     Examples:
             </p>
-            <div class="example">
-                <div>
+            <div id="carousel_buisness" class="owl-carousel owl-theme example example_buisness">
+                <div class="item_buisness">
                     <div class="example_image">
                         <img src="images/7.png" alt="7">
                     </div>
                     <span>Employee Training</span>
                 </div>
-                <div>
+                <div class="item_buisness">
                     <div class="example_image">
                         <img src="images/8.png" alt="7">
                     </div>
@@ -144,20 +227,20 @@
             <p class="example_para">
                 Examples:
             </p>
-            <div class="example">
-                <div>
+            <div id="carousel_teacher" class="owl-carousel owl-theme example example_teacher">
+                <div class="item_teacher">
                     <div class="example_image">
                         <img src="images/9.png" alt="7">
                     </div>
                     <span>Geography Tests</span>
                 </div>
-                <div>
+                <div class="item_teacher">
                     <div class="example_image">
                         <img src="images/10.png" alt="7">
                     </div>
                     <span>Adult Learning Tests</span>
                 </div>
-                <div>
+                <div class="item_teacher">
                     <div class="example_image">
                         <img src="images/11.png" alt="7">
                     </div>
@@ -165,7 +248,7 @@
                 </div>
             </div>
         </div><!-------- teacher close -------------->
-    </div><!------------------------------------ user start close ------------------------------>
+    </div><!------------------------------------ user close ------------------------------>
 
     <div class="container-fluid features"><!-------------- features start  ------------------------>
         <div class="features_home_image">
@@ -173,9 +256,9 @@
         </div>
         <div class="features_home_content">
             <div class="features_main_heading">
-                <h2>Some Features</h2>
+                <h2>Why To Choose Us</h2>
             </div>
-            <div><!------------- cards line 1 start  ------------->
+            <div><!------------- cards line start  ------------->
                 <div class="features_home_card"><!--- card 1 start --->
                     <div class="features_home_card_icon"><span class="fas fa-globe-americas"></span></div>
                     <div>
@@ -212,37 +295,46 @@
                         </p>
                     </div>
                 </div><!--- card 4 close  --->
-            </div><!----------- cards line 2 close  ------------->
+            </div><!----------- cards line close  ------------->
         </div>
     </div><!--------------------------------- features close  --------------------------------------->
     
-    <div class="container-fluid demo"><!------- container demo start -------->
-        <div class="demo_main_heading"><!---- demo main heading ---->
-            <h2>Request A Demo</h2>
-            <h4>Feel the experience of all premium features of TestYou before to buy.</h4>
-        </div><!---- demo main heading close ---->
-        <div><!---- main div for student examiner line ---->
-            <div class="examiner_demo">
-                <h2>Examiner</h2>
-                <ol>
-                    <li>Take a look at our new demo examiner feature.</li>
-                    <li>Demo mode is very essential to know about feature</li>
-                    <li>Examiner demo mode will ease your way to conduct test.</li>
-                </ol>
-                <div style="width: 100%;text-align: center;"><button>Demo For Examiner</button></div>
-            </div>
-            <div class="line_demo"></div>
-            <div class="student_demo">
-                <h2>Student</h2>
-                <ol>
-                    <li>Demo for Student mode to get familiar with test pattern.</li>
-                    <li>Student section provides you a detailed preview.</li>
-                    <li>Sign-up after the demo to get full access.</li>
-                </ol>
-                <div style="width: 100%;text-align: center;"><button>Demo For Student</button></div>
-            </div>
-        </div><!---- main div for student examiner line close ---->
-    </div><!-------- container demo close ------->
+
+
+
+    <div class="container-fluid demo"><!--------- demo container fluid start --------->
+        <div class="demo_home_image">
+            <div class="demo_main_heading"><!---- demo heading ------>
+                <h1>Request A Demo</h1>
+                <p>Feel the experience of all premium features of our website before to buy.</p>
+            </div><!--------- demo heading close --------->
+            <div><!--------- demo cards main start --------->
+                <div class="examiner_demo"><!---- demo card1 start ----->
+                    <h3>Examiner</h3>
+                    <ul>
+                        <li>Take a look at our new demo examiner feature.</li>
+                        <li>Demo mode is very essential to know about feature</li>
+                        <li>Examiner demo mode will ease your way to conduct test.</li>
+                    </ul>
+                    <hr>
+                    <div style="width: 100%;text-align: center;"><button>Demo For Examiner</button></div>
+                </div><!---- demo card1 close ----->
+    
+                <div></div><!---- extra but important ----->
+    
+                <div class="student_demo"><!---- demo card2 start ----->
+                    <h3>Student</h3>
+                    <ul>
+                        <li>Demo for Student mode to get familiar with test pattern.</li>
+                        <li>Student section provides you a detailed preview.</li>
+                        <li>Sign-up after the demo to get full access.</li>
+                    </ul>
+                    <hr>
+                    <div><button>Demo For Student</button></div>
+                </div><!---- demo card2 close ----->
+            </div><!--------- demo cards main close --------->
+        </div>
+    </div><!--------- demo container fluid close --------->
     <div class="container-fluid footer">
         <div>
             <h3>About Us</h3>

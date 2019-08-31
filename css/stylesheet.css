@@ -148,7 +148,7 @@ li:hover .nav-li ul {
     position: relative;
     z-index: 10;
     width: 100%;
-    background-color: #fafafa;
+    background-color: #fff;
     padding: 50px; 
     display: flex;
 }
@@ -183,7 +183,7 @@ li:hover .nav-li ul {
     margin-left: -30px;
     font-size: 50px;
     border: none;
-    background-color: #fafafa;
+    background-color: #fff;
 }
 /* ---------------------- icon setting ------------------ */
 .user p,.admin p{
@@ -234,6 +234,7 @@ li:hover .nav-li ul {
     padding: 50px;
     padding-top: 30px;
     text-align: center;
+    background-color: #fafafa;
 }
 .explanation h2{
     margin-bottom: 20px;
@@ -264,15 +265,15 @@ li:hover .nav-li ul {
 .working{
     width: 100%;
     align-items: center;
-    padding: 50px;
-    padding-top: 0;
+    padding-bottom: 40px;
     z-index: 100;
+    background-color: #fafafa;
 }
-.working_icons_main{
+.item_working{
     display: flex;
 }
 .working_field{
-    margin: 0 auto;    
+    margin: 0 auto;
 }
 .working_icons{
     width: 100px;
@@ -282,22 +283,22 @@ li:hover .nav-li ul {
     background-position: center center;
     background-repeat: no-repeat;
 }
-.working_field:nth-child(1) .working_icons{
+/* .item_working:first-child .working_field:first-child .working_icons{
     background-size: 60px;
     background-image: url(../images/2.png);
 }
-.working_field:nth-child(2) .working_icons{
+.item_working:first-child .working_field:last-child .working_icons{
     background-size: 80px;
     background-image: url(../images/3.png);
 }
-.working_field:nth-child(3) .working_icons{
+.item_working:last-child .working_field:first-child .working_icons{
     background-size: 60px;
     background-image: url(../images/4.png);
 }
-.working_field:nth-child(4) .working_icons{
+.item_working:last-child .working_field:last-child .working_icons{
     background-size: 60px;
     background-image: url(../images/5.png);
-}
+} */
 .working_field p{
     text-align: center;
     margin-top: 10px;
@@ -310,8 +311,9 @@ li:hover .nav-li ul {
 
 /*--------------------- users start ----------------------*/
 .users{
-    background-color: #fafafa;
+    background-color: #fff;
     text-align: center;
+    padding-top: 25px;
 }
 .users h2{
     font-weight: 600;
@@ -360,14 +362,10 @@ li:hover .nav-li ul {
     margin: 0 auto 75px;
     text-align: center;
     display: flex;
-    width: 100%; 
 }
 .example div{
-    width: 32%;
-    float: left;
     background: #fff;
     margin: 0 auto;
-    margin-bottom: 10px;
 }
 .example div span{
     font-size: 18px;
@@ -375,7 +373,7 @@ li:hover .nav-li ul {
     line-height: 25px;
     padding: 10px 0;
     display: block;
-    background-color: #fafafa;
+    background-color: #fff;
 }
 .example div .example_image{
     height: 215px;
@@ -385,6 +383,9 @@ li:hover .nav-li ul {
     width: 100%;
     display: table;
 }
+.example_buisness .example_image{
+    width: 75% !important;
+}
 .example div .example_image img{
     position: absolute;
     left: 0;
@@ -392,23 +393,11 @@ li:hover .nav-li ul {
     top: 0;
     bottom: 0;
     margin: auto;
-    max-width: 290px;
+    height: 200px;
+    width: 95%;
 }
 
 /*--------------------- users close ----------------------*/
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /*---------------------- features start ------------------------------*/
 .features{
@@ -441,16 +430,15 @@ li:hover .nav-li ul {
 .features_main_heading h2{
     font-weight: 600;
     text-transform: capitalize;
-    color: #fafafa;
+    color: #fff;
     line-height: 1.2;
     font-family: 'Poppins', sans-serif;
     letter-spacing: 0;
     font-size: 30px;
     margin: 0;
 }
-.features>div:nth-child(2),.features>div:nth-child(3){
+.features>div{
     color: #fff;
-    /* margin-top: 20px; */
 }
 .features_home_card{
     width: 100%;
@@ -460,16 +448,6 @@ li:hover .nav-li ul {
     padding-bottom: 30px;
     display: flex;
 }
-.features_home_card div:nth-child(1),.features_card div:nth-child(2){
-    height: 100%;
-    box-sizing: border-box;
-}
-/* .features_home_card_icon{
-    width: 20%;
-    height: 100%;
-    text-align: center;
-    padding-top: 10px;
-} */
 .features_home_card_icon span{
     font-size: 50px;
     border: 1px solid rgba(255, 255, 255, 0.2);
@@ -483,7 +461,7 @@ li:hover .nav-li ul {
 }
 .features_home_card div:nth-child(2){
     padding: 0 20px 0 10px;
-    width: 80%;
+    width: 100%;
 }
 .features_home_card div:nth-child(2) p{
     font-size: 15px;
@@ -504,62 +482,100 @@ li:hover .nav-li ul {
 }
 /*-------------------------------- features home close ---------------------------*/
 
-
-
-
-
-
-
-
 /*-------------------------------- demo start ---------------------------------*/
 .demo{
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    background-color: #fafafa;
+    height: 900px;
+}
+.demo_home_image{
     width: 100%;
     padding: 40px !important;
-    padding-top: 30px !important;
-    background-color: #fafafa;
+    padding-top: 120px !important;
+    background: url(../images/home-btn-bg.jpg) no-repeat center bottom;
+    background-size: cover !important;
+    max-height: 660px !important;
 }
 .demo_main_heading{
     text-align: center;
+    max-width: 600px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
 }
-.demo_main_heading h2{
-    font-weight: 600;
-    line-height: 1.3;
+.demo_main_heading h1{
     text-transform: capitalize;
-    color: #002147;
-    line-height: 1.2;
     font-family: 'Poppins', sans-serif;
-    letter-spacing: 0;
-    font-size: 30px;
+    font-size: 38px;
     margin-bottom: 20px;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.27;
+    letter-spacing: normal;
+    text-align: center;
+    color: #f7fafc;
+    margin-bottom: 50px;
 }
 .demo_main_heading p{
-    font-weight: bold;
+    font-size: 18px;
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.33;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ffffff;
 }
 .demo div:nth-child(2){
     display: flex;
-    margin-top: 30px;
+    margin-top: 50px;
 }
 .student_demo,.examiner_demo{
     margin: 0 auto;
-    width: 40%;
+    width: 45%;
+    background-color: #fff;
+    box-shadow: 0 20px 50px 0 rgba(60, 66, 79, 0.1);
+    border-radius: 10px;
+    padding: 26px 50px;
+    box-sizing: border-box;
 }
-.student_demo h2,.examiner_demo h2{
+.student_demo h3,.examiner_demo h3{
     text-align: center;
     margin-bottom: 30px;
-}
-.line_demo{
-    border: 2px solid #000;
-    background-color: #000;
+    font-size: 34px;
+    font-weight: 350;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.41;
+    letter-spacing: normal;
+    color: #3c424f;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .demo li{
     font-size: 18px;
-    line-height: 24px;
     font-family: Merriweather;
     justify-content: center;
     margin-bottom: 5px;
+    border: 0px none;
+    padding: 10px 0px 10px 32px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #686b77;
+    background: url(../images/list_icon.png) no-repeat left 18px;
 }
-.demo ol{
-    height: 154px;
+.demo ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+    margin-bottom: 0;
 }
 .student_demo button,.examiner_demo button{
     box-shadow: none;
@@ -570,38 +586,58 @@ li:hover .nav-li ul {
     transition: all;
     transition-duration: 0.6s;
     letter-spacing: 1px;
-    width: 80%;
+    width: 100%;
     background-color: rgb(25, 133, 233);
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1;
+    text-align: center;
+    color: #ffffff;
+}
+.btn-primary {
     color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
 }
 .student_demo button:hover,.examiner_demo button:hover{
     border: 2px solid rgb(8, 73, 133);
     background-color: rgb(4, 88, 167);
 }
+.demo_bottom{
+    width: 100%;
+    min-height: 200px;
+    background-color: #fafafa;
+    z-index: -10;
+}
 /*-------------------------------- demo close ---------------------------------*/
-
-
 
 /*-------------------------------------- about us page----------------*/
 .about{
     padding: 50px;
     width: 100%;
 }
-.about div:last-child{
+.about div:first-child{
     float: right;
     width: 40%;
     height: 310px;
+    margin-bottom: 20px;
 }
-.about div:last-child img{
+.about div:first-child img{
     width: 100%;
     height: 100%;
 }
-.about div:first-child{
+.about div:last-child{
     float: left;
     width: 60%;
 }
-
 /*----------------- features page ------------------*/
+.features_main{
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
 .features_main>div{
     padding: 30px;
     height: auto !important;
@@ -619,6 +655,15 @@ li:hover .nav-li ul {
     width: 40%;
     display: inline-block;
 }
+.features_main p{
+    padding: 0 0 40px 0;
+    text-align: left;
+    font-size: 15px;
+    margin-top: 15px;
+    font-weight: 400;
+    line-height: 25px;
+    color: #737373;
+}
 /*----------------------------- contact us page --------------------------*/
 .contact{
     padding: 30px 0px; 
@@ -626,6 +671,15 @@ li:hover .nav-li ul {
 }
 .contact section:first-child{
     display: flex;
+}
+.map{
+    width: 65%;
+    order: 1;
+}
+.form{
+    width: 30%;
+    margin-left: 30px;
+    order: 2;
 }
 .contact section:first-child h4{
     font-weight: 700;
@@ -640,8 +694,7 @@ li:hover .nav-li ul {
     background: #fff;
     padding: 30px 30px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,.08);
-    width: 300px;
-    margin-left: 30px;
+    width: 100%;
 }
 .contact_inner .section-field{
     position: relative;
@@ -649,7 +702,7 @@ li:hover .nav-li ul {
     float: left;
 }
 .contact_inner .section-field input{
-    outline: medium none !important;
+    /* outline: medium none !important; */
     box-sizing: border-box;
     position: relative;
     width: 100%;
@@ -693,7 +746,7 @@ li:hover .nav-li ul {
 }
 .map iframe{
     height: 200px;
-    width: 600px;
+    width: 100%;
     height: 573px;
 }
 .contact section:last-child{
@@ -741,6 +794,7 @@ li:hover .nav-li ul {
 }
 .contact_box .social a{
     margin-top: 0px !important;
+    /* color: #4ac4f3; */
 }
 .contact_box:last-child .contact_box_content{
     display: block;
@@ -810,7 +864,7 @@ li:hover .nav-li ul {
 	margin-top: 50px;
 	border-radius: 30%;
 	box-shadow: 0 5px 15px -5px #00000070;
-	color: rgb(25, 133, 233);;
+	color: rgb(25, 133, 233);
 	overflow: hidden;
 	position: relative;
 	padding: 0;
@@ -827,7 +881,7 @@ li:hover .nav-li ul {
 	position: absolute;
 	width: 120%;
 	height: 120%;
-	background: rgb(25, 133, 233);;
+	background: rgb(25, 133, 233);
 	transform: rotate(45deg);
 	left: -110%;
 	top: 90%;
@@ -850,8 +904,6 @@ li:hover .nav-li ul {
     }
 }
 /*--------------------------------- footer close ---------------------------------*/
-
-
 
 
 
