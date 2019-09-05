@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="css/fonts.css">
 </head>
 <body>
+    <div class="container-bg" id="main_image"></div>
     <div id="main" style="z-index: -100">
     <nav class="navbar navbar-default navbar-fixed-top" id="navbar-scroll">
         <div class="navbar-header">
@@ -32,48 +33,97 @@
             </button>
         </div>
         <div class="navbar-collapse collapse navbar-right" id="abc">
+            
             <ul class="nav navbar-nav">
+                <li data-toggle="collapse" data-target="#abc"><i class="fa fa-times"></i></li>
                 <li class="active"><a href="#" class="nav-li">HOME</a></li>
                 <li><a href="pages/about.html" class="nav-li">ABOUT US</a></li>
                 <li><a href="pages/features.html" class="nav-li">FEATURES</a></li>
                 <li><a href="pages/contact.html" class="nav-li">CONTACT US</a></li>
-                <li class="nested"><a href="#" class="nav-li">LOGIN</a>
-                    <ul class="nested-nav">
-                        <li><a href="#" class="nav-li">EXAM LOGIN</a></li>
-                        <li><a href="#" class="nav-li">ADMIN LOGIN</a></li>
-                    </ul>
+                <li class="nested"><a href="pages/login.html" class="nav-li">LOGIN</a>
+                    <!-- <ul class="nested-nav">
+                        <li><a href="login.html" class="nav-li">EXAM LOGIN</a></li>
+                        <li><a href="login.html" class="nav-li">ADMIN LOGIN</a></li>
+                    </ul> -->
                 </li>
+                <!-- <li><a href="pages/contact.html" class="nav-li">SIGN UP</a></li> -->
+               
             </ul>
         </div>
     </nav>
         <div class="carousel-caption">
-            <h1>This is main heading</h1>
-            <h3>This is sub main heading</h3>
+            <h1>Online Exam System</h1>
+            <h3>Easy Way to Make Online Exams</h3>
             <p>
                 <q> Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet consectetur adipisicing elit.<br>Lorem ipsum dolor sit amet consectetur adipisicing elit. </q>
             </p>
+            <!-- <button style="margin-top: 100px" class="btn btn-danger carousel-main-btn">SIGN UP</button> -->
+            <a href="pages/signUp.html" style="margin-top: 55px" class="btn btn-danger carousel-main-btn" role="button">SIGN UP</a>
         </div>
-        <div class="carousel-indicators" style="top: 500px">
-            <button class="btn btn-danger">SIGN UP</button>
-        </div>
+        <!-- <div class="carousel-indicators" >
+            
+        </div> -->
     </div><!---------------------------------------------------------- main close ---------------------->
-    <div class="container-fluid cards" style="z-index: 100">
+        <!-- -------------------- Form ----------------------- -->
+        <div class="login-tab">
+
+                <form method="POST">
+                        <h2 class="hp2">LOGIN</h2>
+                    <div class="input-fields">
+                        
+                        <input type="text" placeholder="Email" required id="email">
+                        <i class="fa fa-envelope icon"></i>
+    
+                    </div>
+                    <div class="input-fields">
+                        
+                        <input type="password" placeholder="Password"  id="password">
+                        <i class="fa fa-lock icon"></i>
+    
+                    </div>
+                             <select required id="select">
+                                <option value="" disabled selected>Login as:</option>
+                                <option value="Student-l" >Student</option>
+                                <option value="Admin-l">Admin</option>
+                                <option value="Center-l">Center</option>
+                            </select><br>
+                    <input type="subbmit" value="LOGIN" id="buttn" onclick="function1()">
+                        <a href="pages/signUp.html">Creat Account </a>
+                        <br><br><br>
+                        <a href="index.html">Home</a>
+                    
+                </form>
+           
+            
+            
+        </div>
+        <div class="emergeny-mobile"></div>
+    <!-- ---------------End Form ----------------------- -->
+   
+    <!-- <div class="container-fluid cards" style="z-index: 100">
         <div class="user">
             <h2>Login As Examiner</h2>
             <p><span class="fas fa-user"></span></p>
-            <button>User Login</button>
-            <div></div><!-- corss section  -->
-        </div><!-- user close -->
-        <div class="line">
+            <button>User Login</button> -->
+            <!-- <div></div> -->
+            <!-- corss section  -->
+        <!-- </div> -->
+        
+        <!-- user close -->
+        <!-- <div class="line">
             <span class="fas fa-users"></span>
-        </div><!-- line close -->
-        <div class="admin">
+        </div> -->
+        <!-- line close -->
+        <!-- <div class="admin">
             <h2>Login As Admin</h2>
             <p><span class="fas fa-user-tie"></span></p>
             <button>Admin Login</button>
-            <div></div><!-- cross section -->
-        </div><!-- admin close -->
-    </div><!--------------------------------- cards close ----------------------------------------------->
+            <div></div> -->
+            <!-- cross section -->
+        <!-- </div> -->
+        <!-- admin close -->
+    <!-- </div> -->
+    <!--------------------------------- cards close ----------------------------------------------->
    
     <div class="container-fluid explanation"><!-- what is online test maker start -->
         <div>
@@ -374,5 +424,38 @@
             </div>     
         </div>
     </div>
+    <script>
+            var mail = document.getElementById('email');
+            var pass = document.getElementById('password');
+            var sel = document.getElementById('select');
+    
+        function function1(){
+           
+            if (mail.value == "admin@gmail.com" && pass.value == "admin123") {
+                window.open("admin/admin-main.html","_self")
+                
+            }
+            else if (mail.value == "student@gmail.com" && pass.value == "student123") {
+                window.open("index.html","_self")
+                
+            }
+            else if (mail.value == "center@gmail.com" && pass.value == "center123") {
+                window.open("index.html","_self")
+                
+            }
+            else{
+                
+            }
+        }
+
+        
+        </script>
+
+        
+
+
+
+
+
     </body>
 </html>

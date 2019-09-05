@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Control Panel</title>        
+    
+    <link rel="stylesheet" href="../css/bootstrap.min.css">    
+    <link rel="stylesheet" href="../css/fonts.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/panels.css">
+    <style>
+    .hide-show{
+    display: block;
+    width: 75%;
+    background-color: #ccc;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+        </header>
+        <section>
+            <div class="first-container">
+                    <div class="panel-logo">
+                            <p class="logo">
+                               <a href="index.html"><i class="fas fa-user"></i></a> 
+                        </p>                       
+                    </div>
+                   
+                   
+                    
+                <ul>
+                    <li><a href="#">
+                        <i class="fa fa-envelope"></i>
+                    </a>                        
+                    </li>
+                    <li><a href="#">
+                        <i class="fa fa-envelope"></i>
+                    </a></li>
+                    <li><a href="#">
+                        <i class="fa fa-envelope"></i>
+                    </a></li>
+                    <li><a href="#">
+                        <i class="fa fa-envelope"></i>
+                    </a></li>
+                    <li><a href="../index.html">
+                        <i class="fa fa-envelope"></i>
+                    </a></li>
+                   
+                </ul>
+                <a href="#" id="panel-hide" class="close bottom-close"><i class="fa fa-angle-left"></i><i class="fa fa-angle-right"></i></a>
+            </div>
+
+            
+            <div class="sec-container">
+                <div class="panel-text">
+                        <p class="text">
+                           <a href="index.html"> <span>A</span>dmin</a> 
+                    </p>                           
+                </div>
+               
+                
+            <ul>
+                <li><a href="#">
+                    About
+                </a>                        
+                </li>
+                <li><a href="#">
+                    SignUp
+                </a></li>
+                <li><a href="#">
+                    Contact
+                </a></li>
+                <li><a href="#">
+                    Features
+                </a></li>
+                <li><a href="../index.html">
+                    Home
+                </a></li>
+               
+            </ul>
+        </div>
+        </section>
+        <footer></footer>
+    </div>
+
+
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/script.js"></script>
+    
+
+    <script>
+        $(document).ready(function (){
+            $("#panel-hide").click(function(){
+                        $(".sec-container").animate({width: "toggle"})
+           
+            
+            })
+            $("button").click(function(){
+                        $("#navigaton-mobile").fadeOut(250)
+           
+            
+            })
+
+            $("#nav-mobile-button").click(function(){
+                $(".nav-mobile").fadeIn(250)
+            })
+
+        })
+    </script>
+</body>
+</html>

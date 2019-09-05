@@ -3,7 +3,7 @@ $(document).ready(function(){
     var content = $(".paralex-container"); 
     $(window).scroll(function(){
         var abc = $(window).scrollTop();
-        $("#main").css("background-position-y",+(abc*0.1)+"px");
+        $("#main_image").css("background-position-y",+(abc*0.1)+"px");
         if($(window).scrollTop() <= 40){
             navbar.removeClass('navbar-scroll');
         } 
@@ -12,3 +12,17 @@ $(document).ready(function(){
         }
     });
 });
+
+//  $(document).ready(function (){
+//     $("#panel-hide").click(function(){
+//         $(".sec-container").animate({width: "toggle"})
+               
+                
+//     })
+    
+    
+    // $("#nav-mobile-button").click(function(){
+    //     $(".nav-mobile").fadeIn(250)
+    // })
+    
+ //})

@@ -1,16 +1,23 @@
-#main{
-    width: 100%;
-    height: 100vh;
+.container-bg{
+    clip-path: polygon(0 0, 100% 0, 85% 60%,0 100%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 85% 60%,0 100%);
     background-image: url(../images/1.jpg);
     background-size: cover;
-    background-position: center;
     background-position-y: 0px;
     background-attachment: fixed; 
     background-repeat: no-repeat;
     transition: initial;
+    /* background-position: center; */
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index:-1;
+}
+#main{
+    width: 100%;
+    height: 100vh;
     padding-left: 20px;
     padding-right: 20px;
-    
 } 
 .navbar-collapse{
     margin-right: 0 !important;
@@ -81,7 +88,7 @@ li:hover .nav-li ul {
     transition: all ease-in-out;
     transition-duration: 0.4s;
 }
-.nested-nav a:hover{
+.nested-nav a::before{
     text-decoration: none;
     color: rgb(0,188,212) !important;
     background-color: #fff !important; 
@@ -99,40 +106,104 @@ li:hover .nav-li ul {
     padding-bottom: 10px;
     transition-duration: 0.6s;
 }
-.navbar-nav>li>a:hover,.navbar-nav>li>ul>li>a:hover{
-    color: rgb(0,188,212) !important;
-    background-color: #fff !important; 
+/* ----------------hover Effect---------------- */
+.navbar-nav>li>a::before,.navbar-nav>li>ul>li>a::before{
+    content: "";
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color:  rgb(0,188,212);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s;
     font-weight: bold;
 }
+.navbar-nav>li>a::after,.navbar-nav>li>ul>li>a::after{
+    content: "";
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    background-color:  #fff;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s;
+    font-weight: bold;
+}
+.navbar-nav>li>a:hover::before,.navbar-nav>li>ul>li>a:hover::before, .navbar-nav>li>a:hover::after,.navbar-nav>li>ul>li>a:hover::after{
+     transform: scaleX(1);
+}
+/* ----------------------end hover effect --------------- */
 .navbar-scroll {
-	background: #ffffff !important;
+	background: #fff !important;
 	padding: 5px  0 !important;
 	box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.4) !important;
 	transition-duration: 0.6s !important;
 }
 .navbar-scroll li a{
-    color: #000 !important;
+    color: #444 !important;
 }
 .navbar-scroll .active>a{
     color: rgb(0,188,212) !important;
 }
 .navbar-scroll .logo{
-    color: #000 !important;
+    color: #444 !important;
 }
 .navbar-scroll .logo-text span{
     color: rgb(0,188,212) !important;
 }
+/* ----------------------------------------------------------this one ---------------------------------- */
 .navbar-toggle{
-    background-color: #fff !important;
+    background-color: none !important;
 }
-
+.navbar-toggle .icon-bar{
+    background: linear-gradient(to left, #363bc9, #13e9e9) !important;
+}
+.navbar-scroll li a::after,.navbar-scroll li ul li a::after, .navbar-nav>.active>a::after{
+    content: "";
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    background-color: rgb(0,188,212);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s;
+    font-weight: bold;
+}
+ .navbar-scroll li a:hover::after,.navbar-scroll li ul li a:hover::after, .navbar-nav>.active>a:hover::after{
+     transform: scaleX(1);
+}
+/* ------------------------min is for desktop view------------------- */
+@media(min-width:768px){
+    .navbar-collapse ul li i{
+        display: none;
+    }
+}
+/* ------------------------max is for mobile view------------------- */
+@media(max-width:767px){
+    .navbar-collapse ul li i{
+        font-size: 18px;
+        width: 40px;
+        height: 40px;
+        color: rgb(0,188,212);
+        background-color: #fff;
+        margin-bottom: 30px;
+        line-height: 40px;
+        border-radius: 50%;
+        border:0px;
+    }
+}
 /* --------------- navbar complete -------------------- */
 .carousel-caption{
-    width: 100%;
-    text-align: center;
-    right: 0 !important;
-    left: 0 !important;
-    top: 130px;
+    width: 50%;
+    text-align: left !important;
+    left: 5% !important;
+    top: 160px;
 }
 .carousel-caption h1{
     font-size: 50px;
@@ -143,6 +214,139 @@ li:hover .nav-li ul {
 .btn{
     transition: all 0.6s;
 }
+/* -------------------login tab------------------ */
+.login-tab{
+    width: 35%;
+    padding: 2% 3% 3% 3%;
+    border-radius:20px;
+    box-shadow: dodgerblue 0px 0px 18px; 
+    background: #fff;
+    margin: auto;    
+    text-align: center;
+    z-index: 100;
+    position: absolute;
+    right: 60px;
+    top: 200px;
+}
+.side-dta form{
+    width: 20%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+}
+form .hp2{
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 1.5em;
+    color: #343434;
+    background: linear-gradient(#18ffff,#2e3192);
+    background-clip: text;
+    background: -webkit-linear-gradien( #18ffff,#2e3192);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;    
+}
+.input-fields{
+    position: relative;
+}
+.input-fields input{
+    width: 100%;
+    background-color: #e6e6e6;
+    border-radius: 20px;
+    line-height: 35px;
+    margin-bottom: 1em;
+    padding-left: 4em;
+    border: none;
+}
+.input-fields input{
+    box-shadow: dodgerblue 0px 0px 5px; 
+}
+.input-fields i {
+    font-size: 1.3em;
+    position: absolute;
+    left: 1.1em;
+    text-align: center;
+    top: .5em;
+ }
+*:focus{
+    outline: none;
+}
+select{
+    width: 100%;
+    height: 35px;
+    background-color: #e6e6e6;
+    border-radius: 20px 20px 20px 20px;
+    margin-bottom: 1em;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+    border: none;
+}
+form input[type=subbmit]{
+    width: 100%;
+    text-align: center;
+    background-image: linear-gradient(to right, #2e3192, #18ffff);
+    color: #fff;
+    font-weight: bold;
+    border-radius: 20px 20px 20px 20px;
+    line-height: 35px;
+    margin: 1em 0 1em 0;
+    border: none;
+}
+form input[type=submit]:hover{
+    
+    box-shadow: dodgerblue 0px 0px 5px; 
+}
+form a{
+    color: #999;
+}
+form a:hover{
+    color: #333;
+}
+@media(max-width:1000px){
+    .login-tab{
+        right: 50px;
+        top: 180px;
+    }
+
+}
+@media(max-width:768px){
+    .login-tab{
+        right: 30px;
+        top: 180px;
+    }
+    .container-bg{
+        clip-path: polygon(0 0, 75% 0, 55% 100%, 0 100%);
+        -webkit-clip-path: polygon(100% 0, 100% 82%, 0 100%, 0 100%, 0 0);
+    }
+
+
+}
+@media(max-width:700px){
+    .navbar-default{
+        background-color: none !important;
+    }    
+    .carousel-caption{
+        width: 90%;
+        margin: 0 auto;
+        text-align: center !important;
+        top: 50px;
+    }
+    .ccarousel-main-btn{
+        margin-top: 30px !important;
+    }
+    #main{
+        height: 130vh;
+    }
+    .login-tab{
+        width: 80%;
+        right: 10%;
+        padding: 2% 6% 6% 6%;
+        top: 400px;
+    }
+
+}
+
 /*---------------- top content complete -------------------*/
 .cards{
     position: relative;
@@ -204,7 +408,7 @@ li:hover .nav-li ul {
     position: absolute;
     background-color: rgb(25, 133, 233);
     width: 100%;
-    height: 30vh;
+    height: 240px;
     transform: skewY(-15deg);
     bottom: -150px;
     left: 15%;
@@ -235,6 +439,7 @@ li:hover .nav-li ul {
     padding-top: 30px;
     text-align: center;
     background-color: #fafafa;
+    margin-top: 35px;
 }
 .explanation h2{
     margin-bottom: 20px;
@@ -488,6 +693,12 @@ li:hover .nav-li ul {
     padding-right: 0 !important;
     background-color: #fafafa;
     height: 900px;
+    
+}
+@media(max-width: 768px){
+    .demo{
+        margin-bottom: 75%;
+    }
 }
 .demo_home_image{
     width: 100%;
