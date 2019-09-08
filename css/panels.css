@@ -1,6 +1,5 @@
 /* -- admin and other work pages background-- */
 *{
-    
     padding: 0;
     margin: 0;
 }
@@ -11,7 +10,6 @@ body{
     padding: 0;
     margin: 0;
     width: 100%;
-    
 }
 .navbar-bg{
     background-color: #333;
@@ -22,8 +20,6 @@ div{
     box-sizing: border-box;
 }
 /* ------------panel and othor ------------------ */
-
-
 .panel-logo, .panel-text{    
     text-align: center;
     font-size: 1em;
@@ -34,7 +30,6 @@ div{
     color: rgb(0,188,212) !important;
     font-weight: 600;
 }
-
 .panel-logo a, .panel-text a{
     display: block;
     width: 100%;
@@ -42,30 +37,35 @@ div{
     background-color: rgba(255, 255, 255, 0) !important;
 }
 .panel-logo .text span{
-    color: rgb(0,188,212);
-    
+    color: rgb(0,188,212);  
 }
 body{
     font-family: Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     z-index: -100;
 }
-.container {
+.side_nav{
     width: 100%;
-    height: 100vh;
+    height: 80%;
     padding: 0;
     margin: 0;
     background-color: #eee;
-    
-   
-    
 } 
-body, nav{
+/* body, nav{
     padding-left: 50px;
+} */
+.navbar{
+    background-color: rgb(0,188,212) !important;
+}
+.navbar-brand{
+    /* background-color: black; */
+    /* height: 100% !important; */
+    /* width: 200px; */
+    margin-right: 50px;
 }
 .first-container {
     width: 50px;
-    height: 100vh;
+    height: 80%;
     background-color: rgba(255,255,255,1) !important;
     position: absolute;
     text-align: center;
@@ -85,20 +85,14 @@ section .first-container ul li a{
     color: #333;
     line-height: 45px;
 }
-
 section .first-container ul li:hover a, section .first-container ul li:hover i,section .first-container ul li:active a, section .first-container ul li:active i{
     color: #333;
 }
-
-
-
-
 .sec-container {
-    width: 40%;
-    height: 100vh;
-    background-color: rgba(255, 255, 255, 0.8);
+    height: 80%;
+    width: 190px;
+    background-color: rgb(21, 137, 214);
     position: absolute;
-    text-align: center;
     z-index: 4099;
     display: none;
 }
@@ -106,10 +100,8 @@ section .sec-container ul{
     width: 100%;
     margin: 50px 0;
     list-style-type: none;
-    
 }
 section .sec-container ul li{
-    
     width: 100%;
     position: relative;
 }
@@ -121,6 +113,7 @@ section .sec-container ul li a{
     line-height: 45px;
     font-weight: 400;
     color: #333;
+    padding-left: 30px;
 }
 section .sec-container ul li a:hover::before{
     content: "";
@@ -135,12 +128,10 @@ section .sec-container ul li a:hover::before{
 }
 section .sec-container ul li a span{
     padding: 0px;
-
 }
 section .sec-container ul li:hover a, section .sec-container ul li:hover i,section .sec-container ul li:active a, section .sec-container ul li:active i{
     color: #333;
 }
-
 .close{
     text-align: center;
     opacity: 1 !important;
@@ -159,41 +150,30 @@ section .sec-container ul li:hover a, section .sec-container ul li:hover i,secti
 
 
 @media (min-width: 768px){
-    body, nav{
+    /* body, nav{
         padding-left: 5%;
-    }
-    
+    } */
     .first-container {
-        width: 5%;
+        /* width: 5%; */
     }
     .sec-container {
         left: 5%;
-        width: 20%;
+        /* width: 25%; */
         display: block;
     }
-
 }
 @media (min-width: 900px){
     .first-container {
-        width: 5%;
+        /* width: 5%; */
     }
     .sec-container {
-        width: 25%;
+        /* width: 25%; */
         display: block;
     }
-
 }
-
-
 @media (min-width: 768px){
     .navbar-bg{
-        background-color: rgba(255, 255, 255, 0 ) !important;
+        background-color: rgba(255, 255, 255, 0) !important;
     }
     
 }
-
-
-
-
-
-
