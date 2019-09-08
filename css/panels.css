@@ -20,8 +20,19 @@ div{
     box-sizing: border-box;
 }
 /* ------------panel and othor ------------------ */
-.panel-logo, .panel-text{    
+.navbar-brand{
+    background-color: #d14242;
+    width: 240px;
+    padding: 19px;
     text-align: center;
+}
+.navbar{
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+}
+.panel-logo, .panel-text{    
+    /* text-align: center; */
     font-size: 1em;
     font-weight: bold;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -29,11 +40,17 @@ div{
     line-height: 50px;
     color: rgb(0,188,212) !important;
     font-weight: 600;
+    height: 90px;
+    padding-top: 30px;
+}
+.panel-text>p{
+    display: flex;
 }
 .panel-logo a, .panel-text a{
     display: block;
     width: 100%;
-    color: rgb(0,188,212) !important;
+    /* color: rgb(0,188,212) !important; */
+    color: #fff;
     background-color: rgba(255, 255, 255, 0) !important;
 }
 .panel-logo .text span{
@@ -65,40 +82,44 @@ body{
 }
 .first-container {
     width: 50px;
-    height: 80%;
-    background-color: rgba(255,255,255,1) !important;
+    height: 90%;
+    /* background-color: rgba(255,255,255,1) !important; */
     position: absolute;
     text-align: center;
     left: 0%;
     z-index: 5000;
+    background: linear-gradient(rgb(63, 58, 58),rgb(49, 114, 126));
 }
 section .first-container ul{
     width: 100%;
-    margin: 50px auto;
+    margin: 0 auto;
     list-style-type: none;    
+    margin-bottom: 30px;
 }
 section .first-container ul li a{
     display: block;
     height: 45px;
     font-size: 14px;
     font-weight: 400;
-    color: #333;
+    /* color: #333; */
     line-height: 45px;
+    color: #fff !important;
 }
 section .first-container ul li:hover a, section .first-container ul li:hover i,section .first-container ul li:active a, section .first-container ul li:active i{
     color: #333;
 }
 .sec-container {
-    height: 80%;
+    height: 90%;
     width: 190px;
-    background-color: rgb(21, 137, 214);
+    background-color: rgb(0,188,212);
     position: absolute;
     z-index: 4099;
     display: none;
+    left: 50px;
 }
 section .sec-container ul{
     width: 100%;
-    margin: 50px 0;
+    margin: 0 0;
     list-style-type: none;
 }
 section .sec-container ul li{
@@ -112,7 +133,7 @@ section .sec-container ul li a{
     font-size: 14px;
     line-height: 45px;
     font-weight: 400;
-    color: #333;
+    color: #fff;
     padding-left: 30px;
 }
 section .sec-container ul li a:hover::before{
@@ -130,18 +151,21 @@ section .sec-container ul li a span{
     padding: 0px;
 }
 section .sec-container ul li:hover a, section .sec-container ul li:hover i,section .sec-container ul li:active a, section .sec-container ul li:active i{
-    color: #333;
+    color: #fff;
 }
 .close{
     text-align: center;
     opacity: 1 !important;
     font-size: 14px;
     color: #999;
-    position: absolute;
-    left: 50%;  
-    bottom: 5%;  
-    transform: translateX(-50%)
-}  
+    float: none;
+} 
+.first-container>hr,.sec-container>hr{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #efefef;
+} 
 
 /* --------------functionality of mobile view------------------ */
 
@@ -150,14 +174,13 @@ section .sec-container ul li:hover a, section .sec-container ul li:hover i,secti
 
 
 @media (min-width: 768px){
-    /* body, nav{
-        padding-left: 5%;
-    } */
+    body, nav{
+        /* padding-left: 5%; */
+    }
     .first-container {
         /* width: 5%; */
     }
     .sec-container {
-        left: 5%;
         /* width: 25%; */
         display: block;
     }
@@ -167,6 +190,7 @@ section .sec-container ul li:hover a, section .sec-container ul li:hover i,secti
         /* width: 5%; */
     }
     .sec-container {
+        /* left: 5%; */
         /* width: 25%; */
         display: block;
     }
