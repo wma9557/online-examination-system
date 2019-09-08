@@ -155,33 +155,34 @@
         </div>
         </section>
     </div>
+    <!-------------- Dashboard ------------------->
     
 
 
+
+
+
+
+    <!---------------------- Links ------------------------>
     <script src="../js/jquery.min.js"></script>
     <script src="../js/popper.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
     <script src="../js/mdb.min.js"></script>
     <script src="../js/script.js"></script>
-    
-
     <script>
         $(document).ready(function (){
             $("#panel-hide").click(function(){
-                        $(".sec-container").animate({width: "toggle"})
-           
-            
+                if ( $(window).width() > 768 ) {
+                    $(".sec-container>*").slideToggle(800);
+                }
+                $(".sec-container").animate({width: "toggle"})
             })
             $("button").click(function(){
-                        $("#navigaton-mobile").fadeOut(250)
-           
-            
+                $("#navigaton-mobile").fadeOut(250)
             })
-
             $("#nav-mobile-button").click(function(){
                 $(".nav-mobile").fadeIn(250)
             })
-
         })
     </script>
 </body>
