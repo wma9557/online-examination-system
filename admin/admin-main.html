@@ -21,7 +21,7 @@
 </head>
 <body>
     <!--Navbar -->
-        <nav class="navbar navbar-expand-lg navbar-dark secondary-color lighten-1">
+        <nav class="navbar navbar-expand-lg navbar-dark secondary-color fixed-top lighten-1">
             <a class="navbar-brand" href="#">Admin Panel</a>
             <ul class="navbar-nav ml-auto nav-flex-icons" style="line-height: 32px;">
 
@@ -72,7 +72,7 @@
         </nav>
       <!--/.Navbar -->
 
-    <div class="container side_nav">
+    <div class="side_nav">
         <section>
             <div class="first-container">
                     <div class="panel-logo">
@@ -83,51 +83,40 @@
                     <hr>
                 <ul>
                     <li><a href="#">
-                        <!-- <i class="fa fa-envelope"></i>s -->
                         <i class="fas fa-home"></i>
                     </a>                        
                     </li>
                     <li><a href="#">
-                        <!-- <i class="fa fa-envelope"></i> -->
                         <i class="fas fa-user-circle"></i>
                     </a></li>
                     <li><a href="#">
-                        <!-- <i class="fa fa-envelope"></i> -->
                         <i class="fas fa-user"></i>
                     </a></li>
                     <li><a href="#">
-                        <!-- <i class="fa fa-envelope"></i> -->
                         <i class="fas fa-book"></i>
                     </a></li>
                     <li><a href="../index.html">
-                        <!-- <i class="fa fa-envelope"></i> -->
                         <i class="fas fa-question-circle"></i>
                     </a></li>
                     <li><a href="../index.html">
-                        <!-- <i class="fa fa-envelope"></i> -->
                         <i class="fas fa-th-list"></i>
                     </a></li>
                     <li><a href="../index.html">
-                        <!-- <i class="fa fa-envelope"></i> -->
                         <i class="fas fa-certificate"></i>
                     </a></li>
                    
                 </ul>
                 <a href="#" id="panel-hide" class="close bottom-close"><i class="fa fa-angle-left"></i><i class="fa fa-angle-right"></i></a>
             </div>
-
-            
             <div class="sec-container">
                 <div class="panel-text">
                     <p class="text">
-                        <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-2.jpg" style="width: 50px;margin-left: 20px;" class="rounded-circle z-depth-0"
+                        <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-2.jpg" style="width: 50px;margin-left: 20px;" id="user_image" class="rounded-circle z-depth-0"
                         alt="avatar image">
                         <a href="index.html" style="margin-left: 10px;" > <span>User Name</span></a> 
                     </p>                           
                 </div>
-                <hr>
-               
-                
+                <hr>    
             <ul>
                 <li><a href="#">
                     Dashboard
@@ -156,12 +145,120 @@
         </section>
     </div>
     <!-------------- Dashboard ------------------->
+    <div class="body_content">
+        <div class="main_title">
+            <p>Admin Dashboard</p>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="card">
+                    <div class="card-header card-header-warning card-header-icon">
+                        <div class="card-icon">
+                            <i class="far fa-clone"></i>
+                        </div>
+                        <p class="card-category">Used Space</p>
+                        <h3 class="card-title">0.9/1<small>GB</small></h3>
+                    </div>
+                    <div class="card-footer">
+                        <div class="stats">
+                            <i class="fas fa-exclamation-triangle text-danger"></i>
+                            <a href="#">Get More Space</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="card">
+                        <header class="card-header card-header-info card-header-icon">
+                            <div class="card-icon">
+                                <i class="fab fa-twitter"></i>
+                            </div>
+                            <p class="card-category">Followers</p>
+                            <h3 class="card-title">+225<small></small></h3>
+                        </header>
+                        <footer class="card-footer">
+                            <div class="stats">
+                                <i class="fas fa-calendar-alt"></i>
+                                Just Updated
+                            </div>
+                        </footer>
+                    </div>
+                </div>
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="card">
+                    <header class="card-header card-header-success card-header-icon">
+                        <div class="card-icon">
+                                <i class="fas fa-user"></i>
+                        </div>
+                        <p class="card-category">Students</p>
+                        <h3 class="card-title">22<small></small></h3>
+                    </header>
+                    <footer class="card-footer">
+                        <div class="stats">
+                            <i class="fas fa-play"></i>
+                            From Begining
+                        </div>
+                    </footer>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="card">
+                    <header class="card-header card-header-info card-header-icon">
+                        <div class="card-icon">
+                            <i class="fas fa-book-open"></i>
+                        </div>
+                        <p class="card-category">Examinations</p>
+                        <h3 class="card-title">2<small></small></h3>
+                    </header>
+                    <footer class="card-footer">
+                        <div class="stats">
+                            <i class="fas fa-play"></i>
+                            From Begining
+                        </div>
+                    </footer>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="card">
+                    <header class="card-header card-header-warning card-header-icon">
+                        <div class="card-icon">
+                            <i class="fas fa-th-list"></i>
+                        </div>
+                        <p class="card-category">Notice</p>
+                        <h3 class="card-title">3<small></small></h3>
+                    </header>
+                    <footer class="card-footer">
+                        <div class="stats">
+                            <i class="fas fa-share-square"></i>
+                            Last Notice Send 2/9/2019
+                        </div>
+                    </footer>
+                </div>
+            </div>
     
-
-
-
-
-
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="card">
+                    <header class="card-header card-header-danger card-header-icon">
+                        <div class="card-icon">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <p class="card-category">Banned Students</p>
+                        <h3 class="card-title">0<small></small></h3>
+                    </header>
+                    <footer class="card-footer">
+                        <div class="stats">
+                            <i class="fas fa-user-slash"></i>
+                            No Student Yet Banned
+                        </div>
+                    </footer>
+                </div>
+            </div>                       
+        </div><!-- ROW -->
+    </div>
+    
+    
 
     <!---------------------- Links ------------------------>
     <script src="../js/jquery.min.js"></script>
@@ -173,7 +270,9 @@
         $(document).ready(function (){
             $("#panel-hide").click(function(){
                 if ( $(window).width() > 768 ) {
+                    $("#user_image").hide(300);
                     $(".sec-container>*").slideToggle(800);
+                    $("#user_image ").show();
                 }
                 $(".sec-container").animate({width: "toggle"})
             })
