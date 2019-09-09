@@ -222,6 +222,12 @@ section .sec-container ul li:hover a, section .sec-container ul li:hover i,secti
     .navbar-nav{
         padding-right: 16px;
     }
+    .side_nav{
+        top: 100px;
+    }
+    .body_content{
+        padding-top: 100px !important;
+    }
 }
 @media (max-height: 575px){
     .first-container,.sec-container{
