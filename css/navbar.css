@@ -65,7 +65,7 @@ body{
 }
 .side_nav{
     min-width: 50px;
-    width: 240px;
+    width: 50px;
     min-height: calc(100% - 68px);
     position: fixed;    
     top: 68px;
