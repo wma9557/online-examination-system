@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="../css/fonts.css">
     <link rel="stylesheet" href="../css/navbar.css">
     <link rel="stylesheet" href="../css/panels.css">
+    <script src="../js/Chart.min.js"></script>
+
     <style>
         .hide-show{
             display: block;
@@ -59,7 +61,7 @@
               <li class="nav-item avatar dropdown">
                 <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-55" data-toggle="dropdown"
                   aria-haspopup="true" aria-expanded="false">
-                  <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-2.jpg" style="width: 35px;" class="rounded-circle z-depth-0"
+                  <img src="../images/admin_image.jpg" style="width: 35px;" class="rounded-circle z-depth-0"
                     alt="avatar image">
                 </a>
                 <div class="dropdown-menu dropdown-menu-lg-right dropdown-secondary"
@@ -106,12 +108,12 @@
                     </a></li>
                    
                 </ul>
-                <a href="#" id="panel-hide" class="close bottom-close"><i class="fa fa-angle-left"></i><i class="fa fa-angle-right"></i></a>
+                <span id="panel-hide" class="close bottom-close"><i class="fa fa-angle-left"></i><i class="fa fa-angle-right"></i></span>
             </div>
             <div class="sec-container">
                 <div class="panel-text">
                     <p class="text">
-                        <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-2.jpg" style="width: 50px;margin-left: 20px;" id="user_image" class="rounded-circle z-depth-0"
+                        <img src="../images/admin_image.jpg" style="width: 50px;margin-left: 20px;" id="user_image" class="rounded-circle z-depth-0"
                         alt="avatar image">
                         <a href="index.html" style="margin-left: 10px;" > <span>User Name</span></a> 
                     </p>                           
@@ -256,9 +258,57 @@
                 </div>
             </div>                       
         </div><!-- ROW -->
+        <div class="row">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-body">
+                        <canvas id="myChart" width="1600" height="900"></canvas>
+                        <!-- <canvas id="myChart2" width="1600" height="900"></canvas> -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <!-- List group links -->
+                        <div class="list-group list-group-flush">
+                        <a class="list-group-item list-group-item-action waves-effect">Something
+                            <span class="badge badge-success badge-pill pull-right">22%
+                                <i class="fas fa-arrow-up ml-1"></i>
+                            </span>
+                        </a>
+                        <a class="list-group-item list-group-item-action waves-effect">Something
+                            <span class="badge badge-danger badge-pill pull-right">5%
+                                <i class="fas fa-arrow-down ml-1"></i>
+                            </span>
+                        </a>
+                        <a class="list-group-item list-group-item-action waves-effect">Something
+                            <span class="badge badge-primary badge-pill pull-right">14</span>
+                        </a>
+                        <a class="list-group-item list-group-item-action waves-effect">Something
+                            <span class="badge badge-primary badge-pill pull-right">123</span>
+                        </a>
+                        <a class="list-group-item list-group-item-action waves-effect">Something
+                            <span class="badge badge-primary badge-pill pull-right">8</span>
+                        </a>
+                        <a class="list-group-item list-group-item-action waves-effect mb-3">Something
+                            <span class="badge badge-primary badge-pill pull-right">8</span>
+                        </a>
+                        <!-- <a class="list-group-item list-group-item-action waves-effect">Something
+                            <span class="badge badge-primary badge-pill pull-right">8</span>
+                        </a> -->
+                                      
+                        </div>
+                        <!-- List group links -->
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     
-    
+
+   
 
     <!---------------------- Links ------------------------>
     <script src="../js/jquery.min.js"></script>
@@ -266,23 +316,5 @@
     <script src="../js/bootstrap.min.js"></script>
     <script src="../js/mdb.min.js"></script>
     <script src="../js/script.js"></script>
-    <script>
-        $(document).ready(function (){
-            $("#panel-hide").click(function(){
-                if ( $(window).width() > 768 ) {
-                    $("#user_image").hide(300);
-                    $(".sec-container>*").slideToggle(800);
-                    $("#user_image ").show();
-                }
-                $(".sec-container").animate({width: "toggle"})
-            })
-            $("button").click(function(){
-                $("#navigaton-mobile").fadeOut(250)
-            })
-            $("#nav-mobile-button").click(function(){
-                $(".nav-mobile").fadeIn(250)
-            })
-        })
-    </script>
 </body>
 </html>

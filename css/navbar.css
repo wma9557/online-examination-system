@@ -64,9 +64,9 @@ body{
     z-index: -100;
 }
 .side_nav{
+    min-width: 50px;
     width: 240px;
     min-height: calc(100% - 68px);
-    background-color: transparent;
     position: fixed;    
     top: 68px;
     overflow-x: hidden;
@@ -97,7 +97,7 @@ section .first-container ul{
     list-style-type: none;    
     margin-bottom: 30px;
 }
-section .first-container ul li a{
+section .first-container ul li a,section .first-container ul li span{
     display: block;
     height: 45px;
     font-size: 14px;
@@ -115,7 +115,6 @@ section .first-container ul li:hover a, section .first-container ul li:hover i,s
     background-color: rgb(0,188,212);
     position: absolute;
     z-index: 4099;
-    display: none;
     left: 50px;
 }
 section .sec-container ul{
@@ -147,6 +146,9 @@ section .sec-container ul li a:hover::before{
     height: 30px;
     transform: rotate(45deg);
     background-color: rgb(0,188,212);
+    box-shadow: 0 4px 10px 0 rgba(0,0,0,0.5), 0 7px 10px -5px rgba(0,188,212,.4);
+
+    /* box-shadow: 2px -2px 2px #333; */
     overflow: hidden;
 }
 section .sec-container ul li a span{
@@ -170,33 +172,14 @@ section .sec-container ul li:hover a, section .sec-container ul li:hover i,secti
 }
 /* --------------functionality of mobile view------------------ */
 @media (min-width: 768px){
-    body, nav{
-        /* padding-left: 5%; */
-    }
-    .first-container {
-        /* width: 5%; */
-    }
-    .sec-container {
-        /* width: 25%; */
-        display: block;
-    }
-}
-@media (min-width: 900px){
-    .first-container {
-        /* width: 5%; */
-    }
-    .sec-container {
-        /* left: 5%; */
-        /* width: 25%; */
-        display: block;
-    }
-}
-@media (min-width: 768px){
     .navbar-bg{
         background-color: rgba(255, 255, 255, 0) !important;
     }
 }
 @media (max-width: 630px){
+    .side_nav{
+        width: 50px;
+    }
     .navbar-brand{
         width: 190px;
     }
