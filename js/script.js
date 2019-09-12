@@ -25,7 +25,7 @@ $(document).ready(function(){
         }
         else{
           $("#user_image ").show();
-          $(".side_nav").animate({width: "240px"});
+          $(".side_nav").animate({width: "100%"});
           $(".sec-container>*").slideDown(800);
         }
     });
