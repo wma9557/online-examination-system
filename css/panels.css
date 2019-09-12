@@ -202,104 +202,17 @@ small{
 .db {
     display: block;
 }
-.btn-circle {
+.btn-rounded {
     border-radius: 100%;
     width: 40px;
     height: 40px;
     padding: 10px;
 }
-.cascading-admin-card .admin-up .fas {
-    padding: 1.7rem;
-    font-size: 2rem;
-    color: #fff;
-    text-align: left;
-    border-radius: 3px;
-}
-.cascading-admin-card .admin-up {
-    margin-left: 4%;
-    margin-right: 4%;
-    margin-top: -1.25rem;
-}
-.cascading-admin-card .admin-up .data {
-    float: right;
-    margin-top: 2rem;
-    text-align: right;
-}
-
-/*=========== panel tabs etc =================*/
-.classic-tabs .nav {
-    white-space: nowrap;
-    overflow-x: auto;
-    position: relative;
-    border-radius: 0.3rem 0.3rem 0px 0px;
-}
-.tabs-cyan {
-    background-color: rgb(0, 188, 212) !important;
-}
-.nav {
-    display: flex;
-    flex-wrap: wrap;
-    padding-left: 0px;
-    margin-bottom: 0px;
-    list-style: none;
-}
-.classic-tabs .tab-content.card {
-    border-top-left-radius: 0px;
-    border-top-right-radius: 0px;
-}
-.tab-content {
-    padding: 2rem 1rem 1rem;
-}
-.card {
-    font-weight: 400;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 5px 0px, rgba(0, 0, 0, 0.12) 0px 2px 10px 0px;
-    border-width: 0px;
-    border-style: initial;
-    border-color: initial;
-    border-image: initial;
-}
-.card {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    min-width: 0px;
-    overflow-wrap: break-word;
-    background-color: rgb(255, 255, 255);
-    background-clip: border-box;
-    border-radius: 0.25rem;
-}
-.classic-tabs .nav.tabs-cyan li a.active {
-    border-color: rgb(255, 235, 59);
-}
-.classic-tabs .nav li a.active {
-    color: rgb(255, 255, 255);
-    border-bottom: 3px solid;
-}
-.classic-tabs .nav li a {
-    display: block;
-    font-size: 13px;
-    text-transform: uppercase;
-    text-align: center;
-    padding: 20px 24px;
-    border-radius: 0px;
-    color: rgba(255, 255, 255,0.7);
-}
-.waves-effect {
-    position: relative;
-    cursor: pointer;
-    user-select: none;
-    -webkit-tap-highlight-color: transparent;
-    overflow: hidden;
-}
-a {
-    text-decoration: none;
-    transition: all 0.2s ease-in-out 0s;
-}
-
-
 
 /*---------------------------/.profile page ----------------------------*/
 
+
+/*--------------------------- student page ----------------------------*/
 
 
 
