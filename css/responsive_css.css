@@ -23,7 +23,7 @@
         font-weight: bold;
     }
     #navbar-scroll li a:hover{
-        color: rgb(0,188,212) !important;
+        color: #fff;
     }
     #navbar-scroll .active>a{
         color: rgb(0,188,212) !important;
@@ -86,11 +86,6 @@
         width: 100%;
         min-height: 300px;
     }
-    /* .features_home_content{
-        width: 100%;
-        box-sizing: border-box;
-        text-align: center;
-    } */
     .features_home_content{
         padding-left: 15px;
         padding-right: 15px;
@@ -102,9 +97,9 @@
     }
     /*--------------------- features cards close -----------------------*/
     /*--------------------- demo start ----------------------*/
-    /* .demo{
-        height: 1380px;
-    } */
+    .demo{
+        height: 1100px;
+    }
     .demo div:nth-child(2){
         display: inherit;
     }
